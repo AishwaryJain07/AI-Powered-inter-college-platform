@@ -56,9 +56,9 @@ It supports:
 ```mermaid
 flowchart TB
 
-    %% Style (Light Blue - Professional)
-    classDef container fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px,color:#000;
-    classDef node fill:#ffffff,stroke:#90caf9,color:#000;
+%% Style (Light Grey - Professional)
+classDef container fill:#f5f5f5,stroke:#9e9e9e,stroke-width:2px,color:#000;
+classDef node fill:#ffffff,stroke:#bdbdbd,color:#000;
 
     %% User
     User["🌐 User / Browser"]
