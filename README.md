@@ -56,18 +56,23 @@ It supports:
 ```mermaid
 flowchart TB
 
+    %% Style (Light Blue - Professional)
+    classDef container fill:#e3f2fd,stroke:#1e88e5,stroke-width:2px,color:#000;
+    classDef node fill:#ffffff,stroke:#90caf9,color:#000;
+
+    %% User
     User["🌐 User / Browser"]
     HTTPS["HTTPS"]
+    class User,HTTPS node;
 
     User --> HTTPS
 
+    %% Django Container
     subgraph Django["Django Application (Gunicorn)"]
         direction TB
 
         Middleware["🛡 Middleware Stack\nSecurity"]
         Router["🔀 Root URL Router\nlogin_system"]
-
-        HTTPS --> Middleware --> Router
 
         subgraph Dashboard["📊 dashboard app"]
             DashboardView["Views\nLandingPage / UserDash"]
@@ -84,6 +89,8 @@ flowchart TB
             AuthModels["Models\nUserProfile / OTP"]
         end
 
+        HTTPS --> Middleware --> Router
+
         Router --> DashboardView
         Router --> DocView
         Router --> AuthView
@@ -94,11 +101,16 @@ flowchart TB
         AuthView --> AuthModels
     end
 
+    class Django,Dashboard,Documents,Accounts container;
+
+    %% External + DB
     DB[(🗄 NeonDB PostgreSQL)]
     Storage["☁️ Cloudinary\nPDF Storage"]
-
     Google["🔐 Google OAuth"]
     Gmail["📧 Gmail SMTP"]
+
+    class DB node;
+    class Storage,Google,Gmail node;
 
     DocModels -->|read/write metadata| DB
     AuthModels -->|read/write| DB
@@ -224,5 +236,3 @@ Though source code is not publicly available.
 This repository showcases system design and live implementation.
 
 ---
-
-Me: Aishwaryjain.in
