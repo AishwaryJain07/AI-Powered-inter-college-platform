@@ -1,5 +1,4 @@
 # AI-Powered-inter-college-platform
-
 erDiagram
 
     auth_user {
