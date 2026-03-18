@@ -39,7 +39,6 @@ It supports:
   - Secure OTP handling
 
 ---
-
 ## 🏗 System Architecture
 
 ```mermaid
@@ -96,8 +95,6 @@ flowchart TB
 
     AuthView -->|OAuth login| Google
     AuthView -->|send OTP| Gmail
-
-
 ---
 
 ## 🧠 Database Design (ERD)
