@@ -61,7 +61,6 @@ flowchart TB
 
     User --> HTTPS
 
-    subgraph Django["Django Application (Gunicorn)"]
         direction TB
 
         Middleware["🛡 Middleware Stack\nSecurity"]
