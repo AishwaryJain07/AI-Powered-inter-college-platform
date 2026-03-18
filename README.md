@@ -1,6 +1,6 @@
 # 📚 ResourceHub – Scalable Document Management System
 
-🔗 **Live Demo:** https://your-live-link.com  
+🔗 **Live Demo:** https://your-live-link.com
 📄 **Type:** Full-Stack Backend System (Django + Cloud + APIs)
 
 ---
@@ -10,11 +10,12 @@
 ResourceHub is a **scalable document management platform** designed for colleges to upload, organize, and access academic resources efficiently.
 
 It supports:
-- Multi-college architecture
-- Structured document categorization (parent/sub cards)
-- Secure authentication with OTP + OAuth
-- Cloud-based file storage
-- Clean modular backend design
+
+* Multi-college architecture
+* Structured document categorization (parent/sub cards)
+* Secure authentication with OTP + OAuth
+* Cloud-based file storage
+* Clean modular backend design
 
 > Designed with production-ready architecture, focusing on scalability, security, and maintainability.
 
@@ -22,23 +23,35 @@ It supports:
 
 ## ✨ Key Features
 
-- 🔐 **Authentication System**
-  - Email OTP verification
-  - Google OAuth login
-- 📂 **Document Management**
-  - Upload, categorize, and fetch PDFs
-  - Parent/Sub-card structured organization
-- 🏫 **Multi-College Support**
-  - Data isolation per college
-- ☁️ **Cloud Storage Integration**
-  - Cloudinary for PDF storage
-- ⚡ **Scalable Backend**
-  - Modular Django apps (accounts, documents, dashboard)
-- 🛡 **Security**
-  - Middleware-based protection
-  - Secure OTP handling
+* 🔐 **Authentication System**
+
+  * Email OTP verification
+  * Google OAuth login
+
+* 📂 **Document Management**
+
+  * Upload, categorize, and fetch PDFs
+  * Parent/Sub-card structured organization
+
+* 🏫 **Multi-College Support**
+
+  * Data isolation per college
+
+* ☁️ **Cloud Storage Integration**
+
+  * Cloudinary for PDF storage
+
+* ⚡ **Scalable Backend**
+
+  * Modular Django apps (accounts, documents, dashboard)
+
+* 🛡 **Security**
+
+  * Middleware-based protection
+  * Secure OTP handling
 
 ---
+
 ## 🏗 System Architecture
 
 ```mermaid
@@ -95,11 +108,11 @@ flowchart TB
 
     AuthView -->|OAuth login| Google
     AuthView -->|send OTP| Gmail
+```
+
 ---
 
 ## 🧠 Database Design (ERD)
-
-This diagram represents the core data relationships and schema design of the system.
 
 ```mermaid
 erDiagram
@@ -156,3 +169,74 @@ erDiagram
     auth_user ||--o{ accounts_otpverification : receives_otps
     auth_user ||--o{ documents_pdfdocument : uploads
     documents_college ||--o{ documents_pdfdocument : owns
+```
+
+---
+
+## ⚙️ Tech Stack
+
+**Backend**
+
+* Django (Modular Architecture)
+* REST APIs
+
+**Database**
+
+* PostgreSQL (NeonDB)
+
+**Cloud & Storage**
+
+* Cloudinary
+
+**Authentication**
+
+* OTP-based Email Verification
+* Google OAuth (django-allauth)
+
+**Deployment**
+
+* Gunicorn + Cloud Hosting
+
+---
+
+## 🧠 System Design Highlights
+
+* Modular Django architecture (separation of concerns)
+* Multi-tenant system (college-based isolation)
+* Cloud storage instead of local filesystem
+* Secure OTP authentication with hashing
+* Extensible document categorization system
+
+---
+
+## 📈 Scalability & Future Improvements
+
+* Add Redis caching
+* CDN for faster delivery
+* Async processing (Celery)
+* Role-based access control (RBAC)
+* Full-text search (Elasticsearch)
+
+---
+
+## 🧑‍💻 My Contribution
+
+* Designed complete backend architecture
+* Built authentication system (OTP + OAuth)
+* Implemented document upload pipeline
+* Designed database schema
+* Integrated cloud + email services
+
+---
+
+## ⚠️ Note
+
+Due to confidentiality, source code is not publicly available.
+This repository showcases system design and live implementation.
+
+---
+
+## 📬 Contact
+
+* LinkedIn: https://your-linkedin
+* Email: [your-email@example.com](mailto:your-email@example.com)
