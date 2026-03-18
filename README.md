@@ -1,7 +1,6 @@
 # 📚 ResourceHub – Scalable Document Management System
 
-🔗 **Live Demo:** https://your-live-link.com
-📄 **Type:** Full-Stack Backend System (Django + Cloud + APIs)
+🔗 **Live:** http://meetmycampus.onrender.com/landing/
 
 ---
 
@@ -219,24 +218,11 @@ erDiagram
 
 ---
 
-## 🧑‍💻 My Contribution
-
-* Designed complete backend architecture
-* Built authentication system (OTP + OAuth)
-* Implemented document upload pipeline
-* Designed database schema
-* Integrated cloud + email services
-
----
-
 ## ⚠️ Note
 
-Due to confidentiality, source code is not publicly available.
+Though source code is not publicly available.
 This repository showcases system design and live implementation.
 
 ---
 
-## 📬 Contact
-
-* LinkedIn: https://your-linkedin
-* Email: [your-email@example.com](mailto:your-email@example.com)
+Me: Aishwaryjain.in
