@@ -1,6 +1,7 @@
-# AI-Powered-inter-college-platform
-erDiagram
+## 3. Entity Relationship Diagram (ERD)
 
+```mermaid
+erDiagram
     auth_user {
         bigint id PK
         varchar email UK
@@ -49,10 +50,8 @@ erDiagram
         varchar max_subcards
     }
 
-    %% Relationships
-    auth_user ||--|| accounts_userprofile : "has one profile"
+    auth_user ||--o| accounts_userprofile : "has one profile"
+    documents_college ||--o{ accounts_userprofile : "has members"
     auth_user ||--o{ accounts_otpverification : "receives OTPs"
     auth_user ||--o{ documents_pdfdocument : "uploads"
-
-    documents_college ||--o{ accounts_userprofile : "has members"
     documents_college ||--o{ documents_pdfdocument : "owns"
